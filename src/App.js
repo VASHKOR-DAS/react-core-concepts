@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 // import logo from './logo.svg';
 import './App.css';
 
@@ -34,7 +35,5 @@ function Person () {
     </div>
   )
 }
-
-
 
 export default App;
