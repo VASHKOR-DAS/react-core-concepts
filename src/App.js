@@ -7,17 +7,18 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          <Person></Person>
-          <Person></Person>
-          <Person></Person>
+          <Person name="Mark Zukar" discovered="Facebook"></Person>
+          <Person name="Steve Jobs" discovered="Apple"></Person>
+          <Person name="Shiv" discovered="Haven"></Person>
         </p>
       </header>
     </div>
   );
 }
 
-function Person () {
+function Person (props) {
   const personStyle={
+    width : "600px",
     border: '2px solid red',
     margin : '20px',
     padding : '20px',
@@ -30,10 +31,10 @@ function Person () {
     margin : '10px'}}> 
     */}
 
-      <h1>Name : Joya Das</h1>
-      <h3>Mother of the year</h3>
+      <h2>Name : {props.name}</h2>
+      <h3>Discovered : {props.discovered}</h3>
     </div>
   )
 }
 
-export default App;
+export default App; 
