@@ -60,12 +60,25 @@ function MovieCounter() {
 
   const handelClick = () => setCount(count + 1);
 
-
   return (
     <div>
       <button onClick={handelClick}>Add Movie</button>
       <h5>Number of movies: {count}</h5>
+
+      {/* MovieCounter component er vitor theke Discover component k call */}
+      <Discover idea={count + 1}></Discover>
+      <Discover idea={count + 2}></Discover>
+      <Discover idea={count + 3}></Discover>
+      <Discover idea={count + 4}></Discover>
+
     </div>
+  )
+}
+
+// onno 1ti component o kono 1ti component er vitor theke pass korte pari
+function Discover(props) {
+  return (
+    <h4>Discover in this year: {props.idea}</h4>
   )
 }
 
