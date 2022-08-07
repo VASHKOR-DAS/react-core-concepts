@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 // import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
@@ -7,6 +8,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        
+        <MovieCounter></MovieCounter>
+        
         <p>
           {/* <Person name="Mark Zukar" discovered="Facebook"></Person>
           <Person name="Steve Jobs" discovered="Apple"></Person>
@@ -46,6 +50,17 @@ function Person (props) {
 
       {/* age property onno kothao use na korle default value hisebe none bosiye */}
       <p>He has done it in {props.age || 'none'} years</p>
+    </div>
+  )
+}
+
+// interaction korar jnne, [0] is default value
+function MovieCounter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <button>Add Movie</button>
+      <h5>Number of movies: </h5>
     </div>
   )
 }
