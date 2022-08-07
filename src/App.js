@@ -54,13 +54,17 @@ function Person (props) {
   )
 }
 
-// interaction korar jnne, [0] is default value
+// MovieCounter er button a click korle er value 1 kore barbe, (0) is default value
 function MovieCounter() {
   const [count, setCount] = useState(0);
+
+  const handelClick = () => setCount(count + 1);
+
+
   return (
     <div>
-      <button>Add Movie</button>
-      <h5>Number of movies: </h5>
+      <button onClick={handelClick}>Add Movie</button>
+      <h5>Number of movies: {count}</h5>
     </div>
   )
 }
